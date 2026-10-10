@@ -1,0 +1,6 @@
+{
+  "name": "SkillLab",
+  "description": "A private college learning platform with role-based access for students and admins, interactive learning paths, attendance tracking, resource hub, and SkillBot AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
