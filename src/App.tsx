@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ToastProvider } from './context/ToastContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import { Header } from './components/layout/Header';
+
 import { StudentSidebar, StudentTab } from './components/layout/StudentSidebar';
 import { AdminSidebar, AdminTab } from './components/layout/AdminSidebar';
 import { StudentDashboard } from './features/dashboard/pages/StudentDashboard';
@@ -23,6 +23,7 @@ import { moduleService } from './services/moduleService';
 import { studentService } from './services/studentService';
 import { ModuleItem, StudentProgressSummary } from './types';
 import { Bot } from 'lucide-react';
+import { Header } from './components/layout/Header';
 
 
 
@@ -35,12 +36,13 @@ function IntroGate() {
   return (
     <>
       {!introFinished && (
-        <div className="fixed inset-0 z-[100] h-screen w-screen overflow-hidden bg-black">
+        <div className="fixed inset-0 z-100 h-screen w-screen overflow-hidden bg-black">
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
             src="/assets/skill-lab-intro.mp4"
             autoPlay
+            muted
             playsInline
             preload="auto"
             onEnded={() => setIntroFinished(true)}
